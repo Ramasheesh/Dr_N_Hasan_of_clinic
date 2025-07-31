@@ -28,7 +28,7 @@ const Navbar = ({ isMenuOpen, setIsMenuOpen, activeSection, scrollToSection }) =
           animate={{ opacity: 1, x: 0 }}
           transition={{ delay: 0.3 }}
         >
-          Dr. N Hasan's Neha Clinic
+          Dr. N Hasan's Health Care Center
         </motion.div>
 
         {/* Desktop Menu */}

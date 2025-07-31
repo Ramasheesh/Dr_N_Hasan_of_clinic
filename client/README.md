@@ -1,4 +1,4 @@
-# Neha Clinic Web App
+# Health Care Center Web App
 
 This is a web application for a heart clinic where users can book appointments and get details about the clinic and doctors.
 

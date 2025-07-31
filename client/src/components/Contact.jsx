@@ -113,7 +113,7 @@ const Contact = () => {
             <div className="bg-gradient-to-r from-gray-800 to-gray-900 p-6 text-white text-center">
               <h3 className="text-2xl font-bold">Find Us on Map</h3>
               <p className="opacity-75 mt-2">
-                Neha Clinic, Mau Road, Sidhari, Azamgarh
+                Health Care Center, Mau Road, Sidhari, Azamgarh
               </p>
             </div>
             <div className="w-full h-160 bg-b pt-0.5  mb-4 shadow-lg rounded-lg overflow-hidden">

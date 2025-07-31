@@ -24,10 +24,10 @@ const AboutClinic = () => {
         {/* Text Content */}
         <div className="md:w-1/2 mb-10 md:mb-10">
           <h2 className="text-3xl md:text-4xl font-extrabold mb-6 text-blue-400">
-            Welcome to Neha Clinic by Dr. N Hasan
+            Welcome to Health Care Center  by Dr. N Hasan
           </h2>
           <p className="text-lg leading-relaxed mb-4">
-            <strong>Neha Clinic</strong>, led by <strong>Dr. N Hasan</strong>,
+            <strong>Health Care Center</strong>, led by <strong>Dr. N Hasan</strong>,
             is a premier heart care center located in Sidhari, Azamgarh. With a
             commitment to clinical excellence and compassionate care, we
             specialize in diagnosing, treating, and managing all kinds of heart
