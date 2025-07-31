@@ -24,7 +24,7 @@ const AboutClinic = () => {
         {/* Text Content */}
         <div className="md:w-1/2 mb-10 md:mb-10">
           <h2 className="text-3xl md:text-4xl font-extrabold mb-6 text-blue-400">
-            Welcome to Neha Clinic
+            Welcome to Neha Clinic by Dr. N Hasan
           </h2>
           <p className="text-lg leading-relaxed mb-4">
             <strong>Neha Clinic</strong>, led by <strong>Dr. N Hasan</strong>,
