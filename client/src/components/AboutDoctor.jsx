@@ -14,7 +14,7 @@ const AboutDoctor = () => {
           <p className="text-lg text-gray-700 dark:text-gray-300 max-w-2xl mx-auto mb-8">
             🫀 <strong>Dr. N Hasan</strong> is a renowned{" "}
             <span className="text-blue-600 font-medium">cardiologist</span>{" "}
-            based in Azamgarh with over <strong>10 years</strong> of experience
+            based in Azamgarh with over <strong>5 years</strong> of experience
             treating complex heart conditions. Known for his compassionate care
             and remarkable outcomes, he has positively impacted the lives of{" "}
             <strong>thousands of patients</strong>
@@ -23,8 +23,8 @@ const AboutDoctor = () => {
             🎓 Professor at PGI Azamgarh
           </h3>
           <p className="text-gray-700 dark:text-gray-300">
-            Dr. Hasan is not only a practicing cardiologist but also serves as a
-            dedicated <strong>Professor at PGI Azamgarh</strong>, mentoring
+            Dr.N Hasan is not only a practicing cardiologist but also serves as a
+            dedicated <strong>Professor</strong>, mentoring
             future doctors with his clinical expertise and real-world knowledge.
           </p>
           <h3 className="text-xl font-semibold text-green-600 dark:text-white mb-2">
