@@ -1,53 +1,82 @@
-import React, { useState } from 'react';
-
+import React, { useState } from "react";
+import Axios from "axios";
 const BookAppointment = () => {
-  const [formData, setFormData] = useState({
-    name: '',
-    phone: '',
-    email: '',
-    date: '',
-    time: '',
-    reason: '',
-    age: '',
-    gender: ''
-  });
-
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const [submitStatus, setSubmitStatus] = useState('');
+  const [submitStatus, setSubmitStatus] = useState("");
+  const [formData, setFormData] = useState({
+    name: "",
+    phone: "",
+    email: "",
+    date: "",
+    time: "",
+    reason: "",
+    age: "",
+    gender: "",
+  });
 
   const handleChange = (e) => {
     setFormData({
       ...formData,
-      [e.target.name]: e.target.value
+      [e.target.name]: e.target.value,
     });
   };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     setIsSubmitting(true);
-    
-    // Simulate form submission
-    setTimeout(() => {
+
+    try {
+      const response = await Axios.post(
+        "https://script.google.com/macros/s/AKfycbyl0Yw3L8zifTbeqdBEboqOAPZ8sRN9rtG7Ilef0Lu9rvzCFEeJLB4tZ5TYGG9BEfCtCQ/exec",
+        formData
+      );
+
+      if (response.status === 200) {
+        setSubmitStatus("success");
+        setFormData({
+          name: "",
+          phone: "",
+          email: "",
+          date: "",
+          time: "",
+          reason: "",
+          age: "",
+          gender: "",
+        });
+      } else {
+        alert("Error submitting form.");
+      }
+    } catch (error) {
+      console.error("Submission error:", error);
+      alert("Submission failed. Please try again later.");
+    } finally {
       setIsSubmitting(false);
-      setSubmitStatus('success');
-      setFormData({
-        name: '', phone: '', email: '', date: '', time: '', reason: '', age: '', gender: ''
-      });
-      
-      // Reset status after 3 seconds
-      setTimeout(() => setSubmitStatus(''), 3000);
-    }, 2000);
+      setTimeout(() => setSubmitStatus(""), 3000);
+    }
   };
 
   const timeSlots = [
-    '10:00 AM', '10:30 AM', '11:00 AM', '11:30 AM',
-    '12:00 PM', '12:30 PM', '2:00 PM', '2:30 PM',
-    '3:00 PM', '3:30 PM', '4:00 PM', '4:30 PM',
-    '5:00 PM', '5:30 PM'
+    "10:00 AM",
+    "10:30 AM",
+    "11:00 AM",
+    "11:30 AM",
+    "12:00 PM",
+    "12:30 PM",
+    "2:00 PM",
+    "2:30 PM",
+    "3:00 PM",
+    "3:30 PM",
+    "4:00 PM",
+    "4:30 PM",
+    "5:00 PM",
+    "5:30 PM",
   ];
 
   return (
-    <section id="appointment" className="py-20 bg-gradient-to-br from-red-50 via-pink-50 to-orange-50">
+    <section
+      id="appointment"
+      className="py-20 bg-gradient-to-br from-red-50 via-pink-50 to-orange-50"
+    >
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <div className="inline-flex items-center justify-center mb-4">
@@ -167,7 +196,7 @@ const BookAppointment = () => {
                     value={formData.date}
                     onChange={handleChange}
                     required
-                    min={new Date().toISOString().split('T')[0]}
+                    min={new Date().toISOString().split("T")[0]}
                     className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-red-500 focus:border-transparent transition-all duration-300 hover:border-red-300"
                   />
                 </div>
@@ -189,11 +218,14 @@ const BookAppointment = () => {
                         className="sr-only"
                         required
                       />
-                      <div className={`p-2 text-center rounded-lg border-2 transition-all duration-300 text-sm font-medium
-                        ${formData.time === time 
-                          ? 'border-red-500 bg-red-500 text-white' 
-                          : 'border-gray-200 bg-white text-gray-700 hover:border-red-300 hover:bg-red-50'
-                        }`}>
+                      <div
+                        className={`p-2 text-center rounded-lg border-2 transition-all duration-300 text-sm font-medium
+                        ${
+                          formData.time === time
+                            ? "border-red-500 bg-red-500 text-white"
+                            : "border-gray-200 bg-white text-gray-700 hover:border-red-300 hover:bg-red-50"
+                        }`}
+                      >
                         {time}
                       </div>
                     </label>
@@ -222,9 +254,10 @@ const BookAppointment = () => {
                   type="submit"
                   disabled={isSubmitting}
                   className={`px-12 py-4 rounded-full font-bold text-lg transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl
-                    ${isSubmitting 
-                      ? 'bg-gray-400 text-gray-600 cursor-not-allowed' 
-                      : 'bg-gradient-to-r from-red-500 to-pink-500 text-white hover:from-red-600 hover:to-pink-600'
+                    ${
+                      isSubmitting
+                        ? "bg-gray-400 text-gray-600 cursor-not-allowed"
+                        : "bg-gradient-to-r from-red-500 to-pink-500 text-white hover:from-red-600 hover:to-pink-600"
                     }`}
                 >
                   {isSubmitting ? (
@@ -233,13 +266,13 @@ const BookAppointment = () => {
                       Booking Appointment...
                     </div>
                   ) : (
-                    'Book Appointment'
+                    "Book Appointment"
                   )}
                 </button>
               </div>
 
               {/* Success Message */}
-              {submitStatus === 'success' && (
+              {submitStatus === "success" && (
                 <div className="text-center">
                   <div className="inline-flex items-center px-6 py-3 bg-green-100 border border-green-300 rounded-full text-green-800 font-semibold">
                     <span className="mr-2">✅</span>
@@ -260,7 +293,11 @@ const BookAppointment = () => {
             <div className="bg-white rounded-2xl p-6 text-center shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
               <div className="text-3xl mb-3">⏰</div>
               <h4 className="font-bold text-gray-800 mb-2">Clinic Hours</h4>
-              <p className="text-gray-600">Mon - Sat<br />10 AM to 6 PM</p>
+              <p className="text-gray-600">
+                Mon - Sat
+                <br />
+                10 AM to 6 PM
+              </p>
             </div>
             <div className="bg-white rounded-2xl p-6 text-center shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
               <div className="text-3xl mb-3">🚨</div>
