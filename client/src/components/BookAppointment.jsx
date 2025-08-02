@@ -24,34 +24,47 @@ const BookAppointment = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     setIsSubmitting(true);
+    setSubmitStatus("");
 
     try {
-      const response = await Axios.post(
-        "https://script.google.com/macros/s/AKfycbyl0Yw3L8zifTbeqdBEboqOAPZ8sRN9rtG7Ilef0Lu9rvzCFEeJLB4tZ5TYGG9BEfCtCQ/exec",
-        formData
+      console.log("Submitting form data:", formData);
+
+      const response = await fetch(
+        "https://script.google.com/macros/s/AKfycbwu6ICoSSg_dKSCbA9DzPt8U1HAopTDBwFtge0N3MgaCG5xl-LURJ2mBtnqqGvRldj3/exec",
+        {
+          method: "POST",
+          mode: "no-cors",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(formData),
+        }
       );
 
-      if (response.status === 200) {
-        setSubmitStatus("success");
-        setFormData({
-          name: "",
-          phone: "",
-          email: "",
-          date: "",
-          time: "",
-          reason: "",
-          age: "",
-          gender: "",
-        });
-      } else {
-        alert("Error submitting form.");
-      }
+      // Since response is opaque (no-cors), assume success
+      
+      setSubmitStatus("success");
+      setFormData({
+        name: "",
+        phone: "",
+        email: "",
+        date: "",
+        time: "",
+        // reason: "",
+        age: "",
+        gender: "",
+      });
+      alert("Appointment booked successfully!");
+// const result = await response.json();
+// console.log( await result.json());
+
     } catch (error) {
       console.error("Submission error:", error);
-      alert("Submission failed. Please try again later.");
+      alert("Error: Submission failed. Please try again later.");
+      setSubmitStatus("error");
     } finally {
       setIsSubmitting(false);
-      setTimeout(() => setSubmitStatus(""), 3000);
+      setTimeout(() => setSubmitStatus(""), 5000);
     }
   };
 
@@ -234,7 +247,7 @@ const BookAppointment = () => {
               </div>
 
               {/* Reason */}
-              <div className="space-y-2">
+              {/* <div className="space-y-2">
                 <label className="text-sm font-semibold text-gray-700 flex items-center">
                   <span className="mr-2">📝</span> Reason for Visit
                 </label>
@@ -246,7 +259,7 @@ const BookAppointment = () => {
                   className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-red-500 focus:border-transparent transition-all duration-300 hover:border-red-300 resize-none"
                   placeholder="Describe your symptoms or reason for consultation..."
                 ></textarea>
-              </div>
+              </div> */}
 
               {/* Submit Button */}
               <div className="text-center pt-6">
