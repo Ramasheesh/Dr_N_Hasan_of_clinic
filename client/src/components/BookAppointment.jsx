@@ -9,9 +9,9 @@ const BookAppointment = () => {
     email: "",
     date: "",
     time: "",
-    reason: "",
     age: "",
     gender: "",
+    reason: "",
   });
 
   const handleChange = (e) => {
@@ -27,40 +27,40 @@ const BookAppointment = () => {
     setSubmitStatus("");
 
     try {
-      console.log("Submitting form data:", formData);
+      const formBody = Object.entries(formData)
+        .map(
+          ([key, value]) =>
+            `${encodeURIComponent(key)}=${encodeURIComponent(value)}`
+        )
+        .join("&");
 
-      const response = await fetch(
-        "https://script.google.com/macros/s/AKfycbwu6ICoSSg_dKSCbA9DzPt8U1HAopTDBwFtge0N3MgaCG5xl-LURJ2mBtnqqGvRldj3/exec",
+      await fetch(
+        "https://script.google.com/macros/s/AKfycbydT8UxQxkySzVJCUJv3ZFPFDXkGuta-K9EIFnXr_Sjkk5EjJt34cCJx28O17Vv-EDSLA/exec",
         {
           method: "POST",
-          mode: "no-cors",
           headers: {
-            "Content-Type": "application/json",
+            "Content-Type": "application/x-www-form-urlencoded;charset=UTF-8",
           },
-          body: JSON.stringify(formData),
+          body: formBody,
         }
       );
 
-      // Since response is opaque (no-cors), assume success
-      
       setSubmitStatus("success");
+      alert("Appointment booked successfully!");
+
       setFormData({
         name: "",
         phone: "",
         email: "",
         date: "",
         time: "",
-        // reason: "",
         age: "",
         gender: "",
+        reason: "",
       });
-      alert("Appointment booked successfully!");
-// const result = await response.json();
-// console.log( await result.json());
-
     } catch (error) {
       console.error("Submission error:", error);
-      alert("Error: Submission failed. Please try again later.");
+      alert("Error: Submission failed.");
       setSubmitStatus("error");
     } finally {
       setIsSubmitting(false);
@@ -69,12 +69,12 @@ const BookAppointment = () => {
   };
 
   const timeSlots = [
-    "10:00 AM",
-    "10:30 AM",
-    "11:00 AM",
-    "11:30 AM",
-    "12:00 PM",
-    "12:30 PM",
+    // "10:00 AM",
+    // "10:30 AM",
+    // "11:00 AM",
+    // "11:30 AM",
+    // "12:00 PM",
+    // "12:30 PM",
     "2:00 PM",
     "2:30 PM",
     "3:00 PM",
@@ -197,7 +197,24 @@ const BookAppointment = () => {
                     <option value="other">Other</option>
                   </select>
                 </div>
-
+                {/* Reason */}
+                <div className="space-y-2">
+                  <label className="text-sm font-semibold text-gray-700 flex items-center">
+                    <span className="mr-2">📝</span> Reason for Visit
+                  </label>
+                  <select
+                    name="reason"
+                    value={formData.reason}
+                    onChange={handleChange}
+                    className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-red-500 focus:border-transparent transition-all duration-300 hover:border-red-300"
+                    required
+                  >
+                    <option value="">Select reason</option>
+                    <option value="Treatment">Treatment</option>
+                    <option value="Medicine Sale">Medicine Sale</option>
+                    <option value="Other">Other</option>
+                  </select>
+                </div>
                 {/* Date */}
                 <div className="space-y-2">
                   <label className="text-sm font-semibold text-gray-700 flex items-center">
@@ -245,21 +262,6 @@ const BookAppointment = () => {
                   ))}
                 </div>
               </div>
-
-              {/* Reason */}
-              {/* <div className="space-y-2">
-                <label className="text-sm font-semibold text-gray-700 flex items-center">
-                  <span className="mr-2">📝</span> Reason for Visit
-                </label>
-                <textarea
-                  name="reason"
-                  value={formData.reason}
-                  onChange={handleChange}
-                  rows="4"
-                  className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-red-500 focus:border-transparent transition-all duration-300 hover:border-red-300 resize-none"
-                  placeholder="Describe your symptoms or reason for consultation..."
-                ></textarea>
-              </div> */}
 
               {/* Submit Button */}
               <div className="text-center pt-6">
