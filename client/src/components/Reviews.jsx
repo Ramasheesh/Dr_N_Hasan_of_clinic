@@ -72,20 +72,22 @@ const Reviews = () => {
     setCurrentReviewIndex(index);
   };
 
-  const averageRating = reviews.reduce((sum, review) => sum + review.rating, 0) / reviews.length;
+  // const averageRating = reviews.reduce((sum, review) => sum + review.rating, 0) / reviews.length;
   const totalReviews = reviews.length;
 
   return (
-    <section id="reviews" className="py-20 bg-gradient-to-br from-yellow-50 via-orange-50 to-red-50">
+    <section id="reviews" 
+        className="pt-12 md:pt-20 md:pt-20 overflow-x-hidden bg-gradient-to-r from-black to-pink-900 text-white"
+>
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <div className="inline-flex items-center justify-center mb-4">
             <div className="text-4xl animate-bounce mr-3">⭐</div>
-            <h2 className="text-4xl md:text-5xl font-bold text-gray-800">
+            <h2 className="text-4xl md:text-5xl font-bold text-[#1FFBFF]">
               Patient Reviews
             </h2>
           </div>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
             Don't just take our word for it - see what our patients have to say about their experience
           </p>
           <div className="w-24 h-1 bg-gradient-to-r from-yellow-500 to-orange-500 mx-auto mt-4 rounded-full"></div>
@@ -109,8 +111,8 @@ const Reviews = () => {
                 ))}
               </div>
               <div>
-                <div className="text-3xl font-bold text-gray-800">{averageRating.toFixed(1)}</div>
-                <div className="text-gray-600">{totalReviews} Google Reviews</div>
+                <div className="text-3xl font-bold text-gray-800">{4.9}</div>
+                <div className="text-gray-600">{260+totalReviews} Google Reviews</div>
               </div>
             </div>
 

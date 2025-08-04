@@ -32,14 +32,14 @@ const Contact = () => {
   return (
     <section
       id="contact"
-      className="py-20 bg-gradient-to-br from-gray-50 to-blue-50"
+      className="pt-12 md:pt-20 pb-16 overflow-x-hidden bg-gradient-to-r from-black to-pink-900 text-white"
     >
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-800">
+          <h2 className="text-4xl md:text-5xl font-bold text-[#1FFBFF]">
             Contact Us
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto mt-4">
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto mt-4">
             Reach out to us for appointments, consultations, or general
             inquiries
           </p>

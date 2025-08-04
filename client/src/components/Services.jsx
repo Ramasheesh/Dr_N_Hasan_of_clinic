@@ -1,57 +1,60 @@
 import React from 'react';
 
-const Services = ({ scrollToSection }) => {
+// const Services = ({ scrollToSection }) => {
+const Services = () => {
   const services = [
     {
-      icon: '🫀',
-      title: 'Heart Disease Treatment',
-      description: 'Comprehensive treatment for various heart conditions including coronary artery disease, heart failure, and arrhythmias.',
+      icon: '🩺',
+      title: 'Blood Pressure Management',
+      description: 'Accurate diagnosis and treatment plans for hypertension to help you stay healthy and prevent complications.',
       gradient: 'from-red-500 to-pink-500'
     },
     {
-      icon: '🩺',
-      title: 'Cardiac Consultation',
-      description: 'Expert consultation for chest pain, shortness of breath, and other cardiac symptoms with detailed assessment.',
+      icon: '🧪',
+      title: 'Diabetes (Sugar) Care',
+      description: 'Comprehensive diabetes care including monitoring, medication, and lifestyle guidance.',
       gradient: 'from-blue-500 to-cyan-500'
     },
     {
-      icon: '📊',
-      title: 'ECG & Monitoring',
-      description: 'Advanced cardiac monitoring including ECG, Holter monitoring, and stress testing for accurate diagnosis.',
+      icon: '🦋',
+      title: 'Thyroid Treatment',
+      description: 'Diagnosis and management of thyroid disorders like hypothyroidism and hyperthyroidism.',
       gradient: 'from-green-500 to-emerald-500'
     },
     {
-      icon: '💊',
-      title: 'Preventive Care',
-      description: 'Heart health screening, risk assessment, and preventive care plans to maintain optimal cardiovascular health.',
+      icon: '🌬️',
+      title: 'Lung & Respiratory Care',
+      description: 'Treatment for breathing problems, asthma, bronchitis, and other chest-related issues.',
       gradient: 'from-purple-500 to-violet-500'
     },
     {
       icon: '🏥',
-      title: 'Emergency Care',
-      description: '24/7 emergency cardiac care for heart attacks, severe chest pain, and other cardiac emergencies.',
+      title: 'Routine Health Checkup',
+      description: 'General physical exams, screenings, and preventive care tailored to your health needs.',
       gradient: 'from-orange-500 to-red-500'
     },
     {
-      icon: '🔄',
-      title: 'Follow-up Care',
-      description: 'Regular follow-up appointments and monitoring for chronic heart conditions with personalized care plans.',
+      icon: '📅',
+      title: 'Follow-up Consultations',
+      description: 'Consistent follow-ups to manage ongoing conditions and ensure effective treatment.',
       gradient: 'from-teal-500 to-blue-500'
     }
   ];
 
   return (
-    <section id="services" className="py-20 bg-gradient-to-br from-gray-100 to-blue-50">
+    <section id="services"       
+    className="pt-12 md:pt-20 md:pt-20 overflow-x-hidden bg-gradient-to-r from-black to-pink-900 text-white"
+>
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <div className="inline-flex items-center justify-center mb-4">
             <div className="text-4xl animate-pulse mr-3">⚕️</div>
-            <h2 className="text-4xl md:text-5xl font-bold text-gray-800">
+            <h2 className="text-4xl md:text-5xl font-bold text-text-[#1FFBFF]">
               Our Services
             </h2>
           </div>
-          <p className="text-xl text-gray-700 max-w-3xl mx-auto">
-            Comprehensive cardiac care services designed to keep your heart healthy and strong
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            Focused care for Blood Pressure, Sugar, Thyroid, Lungs, and Chest health
           </p>
           <div className="w-24 h-1 bg-gradient-to-r from-red-500 to-pink-600 mx-auto mt-4 rounded-full"></div>
         </div>
@@ -93,22 +96,22 @@ const Services = ({ scrollToSection }) => {
         </div>
 
         {/* Call to Action */}
-        <div className="text-center mt-16">
+        {/* <div className="text-center mt-16">
           <div className="bg-white rounded-2xl p-8 shadow-lg border border-gray-200 max-w-2xl mx-auto">
-            <div className="text-3xl mb-4">❤️</div>
+            <div className="text-3xl mb-4">🕑</div>
             <h3 className="text-2xl font-bold text-gray-800 mb-4">
               Need Immediate Consultation?
             </h3>
             <p className="text-gray-600 mb-6">
-              Our expert team is here to provide you with the best cardiac care. Book your appointment today.
+              Dr. N Hasan is available to guide you with trusted advice and medical care. Book an appointment now.
             </p>
             <button 
-            onClick={() => scrollToSection('appointment')}
-            className="bg-gradient-to-r from-red-500 to-pink-500 text-white px-8 py-3 rounded-full font-semibold hover:from-red-600 hover:to-pink-600 transform hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl">
+              onClick={() => scrollToSection('appointment')}
+              className="bg-gradient-to-r from-red-500 to-pink-500 text-white px-8 py-3 rounded-full font-semibold hover:from-red-600 hover:to-pink-600 transform hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl">
               Book Appointment Now
             </button>
           </div>
-        </div>
+        </div> */}
       </div>
     </section>
   );

@@ -69,12 +69,12 @@ const BookAppointment = () => {
   };
 
   const timeSlots = [
-    // "10:00 AM",
-    // "10:30 AM",
-    // "11:00 AM",
-    // "11:30 AM",
-    // "12:00 PM",
-    // "12:30 PM",
+    "10:00 AM",
+    "10:30 AM",
+    "11:00 AM",
+    "11:30 AM",
+    "12:00 PM",
+    "12:30 PM",
     "2:00 PM",
     "2:30 PM",
     "3:00 PM",
@@ -88,24 +88,24 @@ const BookAppointment = () => {
   return (
     <section
       id="appointment"
-      className="py-20 bg-gradient-to-br from-red-50 via-pink-50 to-orange-50"
+      className="pt-12 md:pt-20 overflow-x-hidden bg-gradient-to-r from-black to-pink-900 text-white"
     >
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <div className="inline-flex items-center justify-center mb-4">
             <div className="text-4xl animate-bounce mr-3">📅</div>
-            <h2 className="text-4xl md:text-5xl font-bold text-gray-800">
+            <h2 className="text-4xl md:text-5xl font-bold text-[#1FFBFF]">
               Book Appointment
             </h2>
           </div>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
             Schedule your consultation with Dr. N Hasan for expert cardiac care
           </p>
           <div className="w-24 h-1 bg-gradient-to-r from-red-500 to-orange-500 mx-auto mt-4 rounded-full"></div>
         </div>
 
         <div className="max-w-4xl mx-auto">
-          <div className="bg-white rounded-3xl shadow-2xl overflow-hidden">
+          <div className="bg-gray-100 rounded-3xl shadow-2xl overflow-hidden">
             <div className="bg-gradient-to-r from-red-500 to-pink-500 p-8 text-white text-center">
               <div className="text-3xl mb-4">🏥</div>
               <h3 className="text-2xl font-bold mb-2">Dr. N Hasan's Clinic</h3>
@@ -116,7 +116,7 @@ const BookAppointment = () => {
               <div className="grid md:grid-cols-2 gap-6">
                 {/* Name */}
                 <div className="space-y-2">
-                  <label className="text-sm font-semibold text-gray-700 flex items-center">
+                  <label className="text-sm font-semibold text-gray-800 flex items-center">
                     <span className="mr-2">👤</span> Full Name *
                   </label>
                   <input
@@ -125,14 +125,14 @@ const BookAppointment = () => {
                     value={formData.name}
                     onChange={handleChange}
                     required
-                    className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-red-500 focus:border-transparent transition-all duration-300 hover:border-red-300"
+                    className="w-full px-4 py-3 border border-gray-300 text-black rounded-xl focus:ring-2 focus:ring-red-500 focus:border-transparent transition-all duration-300 hover:border-red-300"
                     placeholder="Enter your full name"
                   />
                 </div>
 
                 {/* Phone */}
                 <div className="space-y-2">
-                  <label className="text-sm font-semibold text-gray-700 flex items-center">
+                  <label className="text-sm font-semibold text-gray-800 flex items-center">
                     <span className="mr-2">📱</span> Phone Number *
                   </label>
                   <input
@@ -141,14 +141,14 @@ const BookAppointment = () => {
                     value={formData.phone}
                     onChange={handleChange}
                     required
-                    className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-red-500 focus:border-transparent transition-all duration-300 hover:border-red-300"
+                    className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-red-500 focus:border-transparent transition-all duration-300 text-black hover:border-red-300"
                     placeholder="Enter your phone number"
                   />
                 </div>
 
                 {/* Email */}
                 <div className="space-y-2">
-                  <label className="text-sm font-semibold text-gray-700 flex items-center">
+                  <label className="text-sm font-semibold text-gray-800 flex items-center">
                     <span className="mr-2">📧</span> Email Address
                   </label>
                   <input
@@ -156,14 +156,14 @@ const BookAppointment = () => {
                     name="email"
                     value={formData.email}
                     onChange={handleChange}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-red-500 focus:border-transparent transition-all duration-300 hover:border-red-300"
+                    className="w-full px-4 py-3 border border-gray-300 text-black rounded-xl focus:ring-2 focus:ring-red-500 focus:border-transparent transition-all duration-300 hover:border-red-300"
                     placeholder="Enter your email address"
                   />
                 </div>
 
                 {/* Age */}
                 <div className="space-y-2">
-                  <label className="text-sm font-semibold text-gray-700 flex items-center">
+                  <label className="text-sm font-semibold text-gray-800 flex items-center">
                     <span className="mr-2">📊</span> Age *
                   </label>
                   <input
@@ -174,14 +174,14 @@ const BookAppointment = () => {
                     required
                     min="1"
                     max="120"
-                    className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-red-500 focus:border-transparent transition-all duration-300 hover:border-red-300"
+                    className="w-full px-4 py-3 border border-gray-300 text-black rounded-xl focus:ring-2 focus:ring-red-500 focus:border-transparent transition-all duration-300 hover:border-red-300"
                     placeholder="Enter your age"
                   />
                 </div>
 
                 {/* Gender */}
                 <div className="space-y-2">
-                  <label className="text-sm font-semibold text-gray-700 flex items-center">
+                  <label className="text-sm font-semibold text-gray-800 flex items-center">
                     <span className="mr-2">⚧</span> Gender *
                   </label>
                   <select
@@ -189,7 +189,7 @@ const BookAppointment = () => {
                     value={formData.gender}
                     onChange={handleChange}
                     required
-                    className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-red-500 focus:border-transparent transition-all duration-300 hover:border-red-300"
+                    className="w-full px-4 py-3 border border-gray-300 text-black rounded-xl focus:ring-2 focus:ring-red-500 focus:border-transparent transition-all duration-300 hover:border-red-300"
                   >
                     <option value="">Select Gender</option>
                     <option value="male">Male</option>
@@ -199,25 +199,42 @@ const BookAppointment = () => {
                 </div>
                 {/* Reason */}
                 <div className="space-y-2">
-                  <label className="text-sm font-semibold text-gray-700 flex items-center">
+                  <label className="text-sm font-semibold text-gray-800 flex items-center">
                     <span className="mr-2">📝</span> Reason for Visit
                   </label>
                   <select
                     name="reason"
                     value={formData.reason}
                     onChange={handleChange}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-red-500 focus:border-transparent transition-all duration-300 hover:border-red-300"
+                    className="w-full px-4 py-3 border border-gray-300 text-black rounded-xl focus:ring-2 focus:ring-red-500 focus:border-transparent transition-all duration-300 hover:border-red-300"
                     required
                   >
-                    <option value="">Select reason</option>
-                    <option value="Treatment">Treatment</option>
-                    <option value="Medicine Sale">Medicine Sale</option>
-                    <option value="Other">Other</option>
+                    <option value="Doctor Consultation">
+                      🩺 Doctor Consultation
+                    </option>
+                    <option value="Diabetes Check-up">
+                      🧪 Diabetes Check-up / Sugar Monitoring
+                    </option>
+                    <option value="Blood Pressure">
+                      💓 Blood Pressure (BP) Check-up
+                    </option>
+                    <option value="Thyroid Management">
+                      🦋 Thyroid Management
+                    </option>
+                    <option value="Chest or Lungs Issue">
+                      🫁 Chest / Lungs Problem
+                    </option>
+                    <option value="Follow-up Visit">🔁 Follow-up Visit</option>
+                    <option value="Medical Test">
+                      🔬 Medical Test / Lab Report
+                    </option>
+                    <option value="Buy Medicine">💊 Buy Medicine</option>
+                    <option value="Other">📄 Other</option>
                   </select>
                 </div>
                 {/* Date */}
                 <div className="space-y-2">
-                  <label className="text-sm font-semibold text-gray-700 flex items-center">
+                  <label className="text-sm font-semibold text-gray-800 flex items-center">
                     <span className="mr-2">📅</span> Preferred Date *
                   </label>
                   <input
@@ -227,14 +244,14 @@ const BookAppointment = () => {
                     onChange={handleChange}
                     required
                     min={new Date().toISOString().split("T")[0]}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-red-500 focus:border-transparent transition-all duration-300 hover:border-red-300"
+                    className="w-full px-4 py-3 border border-gray-300  text-black rounded-xl focus:ring-2 focus:ring-red-500 focus:border-transparent transition-all duration-300 hover:border-red-300"
                   />
                 </div>
               </div>
 
               {/* Time Slot */}
               <div className="space-y-2">
-                <label className="text-sm font-semibold text-gray-700 flex items-center">
+                <label className="text-sm font-semibold text-gray-800 flex items-center">
                   <span className="mr-2">🕐</span> Preferred Time *
                 </label>
                 <div className="grid grid-cols-3 md:grid-cols-7 gap-2">
@@ -303,7 +320,7 @@ const BookAppointment = () => {
             <div className="bg-white rounded-2xl p-6 text-center shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
               <div className="text-3xl mb-3">📞</div>
               <h4 className="font-bold text-gray-800 mb-2">Call Us</h4>
-              <p className="text-gray-600">+91 9876543210</p>
+              <p className="text-blue-600">+91 6386544147</p>
             </div>
             <div className="bg-white rounded-2xl p-6 text-center shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
               <div className="text-3xl mb-3">⏰</div>
