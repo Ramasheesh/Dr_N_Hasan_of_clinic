@@ -3,11 +3,11 @@ import { SocialIcon } from "react-social-icons";
 const Contact = () => {
   const contactInfo = [
     {
-      icon: <SocialIcon network="whatsapp" url="https://wa.me/919876543210" />,
+      icon: <SocialIcon network="whatsapp" url="https://wa.me/9452895468" />,
       title: "Phone",
       details: [
-        { label: "+91 9876543210", href: "tel:+919876543210" },
-        { label: "+91 8765432109", href: "tel:+918765432109" },
+        { label: "+91 9452895468", href: "tel:+919452895468" },
+        { label: "+91 7905688034", href: "tel:+917905688034" },
         { label: "Emergency: 24/7", href: "" },
       ],
       color: "from-blue-500 to-cyan-500",
@@ -100,7 +100,7 @@ const Contact = () => {
                 <p className="text-lg mb-2">
                   Call immediately for urgent cardiac care:
                 </p>
-                <div className="text-3xl font-bold mb-2">+91 9876543210</div>
+                <div className="text-3xl font-bold mb-2">+91 7905688034</div>
                 <p className="text-sm opacity-75">
                   24/7 emergency service available
                 </p>

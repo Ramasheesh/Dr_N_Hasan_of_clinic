@@ -13,7 +13,7 @@ const TreatedPatients = () => {
     finalCounts = {
       patients: 5000,
       appointments: 2500,
-      experience: 7,
+      experience: 14,
       satisfaction: 100,
     };
   }

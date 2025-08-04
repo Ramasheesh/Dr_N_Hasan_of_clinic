@@ -9,14 +9,14 @@ const doctors = [
       "Specialist in Heart, Lungs, Diabetes, Thyroid & Chest Disorders",
     phone: "6386544147",
     image: drHasan, // replace with actual
-    experience: "7+ Years of Experience | Founder - Dr. N. Hasan Clinic",
+    experience: "14+ Years of Experience | Founder - Dr. N. Hasan Clinic | Ex-Consultant:MMC MZN, NM Heart Center Ghaziabad",
     bio: "Dr. N. Hasan is a highly experienced physician known for his expertise in managing chronic conditions such as hypertension, diabetes, and thyroid disorders. He believes in patient-first care with a focus on accurate diagnosis and long-term health planning.",
   },
   {
     name: "Dr. K. Ajaz",
     degrees: "M.B.B.S. (General Physician)",
     specialization: "Expert in General Medicine, Fever, and Respiratory Care",
-    phone: "8737037771",
+    phone : "93469",
     image: drHasan, // replace with actual
     experience:
       "Former RMO – Noor Hospital, Mau | 5+ Years of Clinical Experience",
@@ -31,7 +31,7 @@ const Doctors = () => {
       className="pt-12 md:pt-20 bg-gradient-to-r from-black to-pink-900 text-white"
     >
       <div className="container mx-auto px-4">
-        <h2 className="text-4xl font-bold text-center text-green-400 mb-4">
+        <h2 className="text-4xl font-bold text-center text-[#1FFDFF] mb-4">
           Meet Our Doctors
         </h2>
         <p className="text-center text-lg text-gray-300 mb-12">

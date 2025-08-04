@@ -13,6 +13,7 @@ const Footer = () => {
         Heart & Cardiology Specialist <br />
         Serving Azamgarh and nearby areas with care.
       </p>
+      <a href="tel:+918874910202" className="text-sm hover:text-blue-400 hover:text-white">📞 Designed by Ashish</a>
     </div>
 
     {/* <!-- Quick Links --> */}
@@ -31,7 +32,7 @@ const Footer = () => {
       <h3 className="text-xl font-semibold text-white mb-3">Contact</h3>
       <p className="text-sm">
         Mau Road, Sidhari, Azamgarh, UP 276001<br />
-        Phone: <a href="tel:+919876543210" className="text-blue-400 hover:text-white">+91 98765 43210</a>
+        Phone: <a href="tel:+919876543210" className="text-blue-400 hover:text-white">+91 7905688034</a>
       </p>
       <div className="flex space-x-4 mt-4 text-2xl">
       <div className="hover:bg-blue-600 rounded-full p-1 transition">
@@ -41,7 +42,7 @@ const Footer = () => {
         <SocialIcon url="https://instagram.com" target="_blank" fgColor="white" bgColor="transparent" />
       </div>
       <div className="hover:bg-green-600 rounded-full p-1 transition">
-        <SocialIcon url="https://wa.me/919876543210" target="_blank" fgColor="white" bgColor="transparent" />
+        <SocialIcon url="https://wa.me/9452895468" target="_blank" fgColor="white" bgColor="transparent" />
       </div>
       <div className="hover:bg-sky-600 rounded-full p-1 transition">
         <SocialIcon url="https://twitter.com" target="_blank" fgColor="white" bgColor="transparent" />

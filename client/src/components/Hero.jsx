@@ -7,9 +7,9 @@ const Hero = ({ scrollToSection }) => (
     id="home"
     className="pt-12 md:pt-20 overflow-x-hidden bg-gradient-to-r from-black to-pink-900 text-white"
   >
-    <div className="container w-full mx-auto px-4 py-10 flex flex-col md:flex-row items-center justify-between">
+    <div className="container w-full mx-auto px-4 py-6 flex flex-col md:flex-row items-center justify-between">
       <div className="md:w-1/2 md:pr-12">
-      <h1 className="text-4xl md:text-5xl  mt-4 font-bold text-green-400 mb-16">
+        <h1 className="text-4xl md:text-5xl  mt-4 font-bold text-green-400 mb-16">
           Welcome to Health Care Center
         </h1>
         <video
@@ -28,8 +28,10 @@ const Hero = ({ scrollToSection }) => (
           Your Trusted Clinic for Heart, Sugar, Thyroid & Chest Care
         </h3>
         <p className="text-lg text-gray-300 mb-8">
-          Experienced doctors | Patient-first approach | Quality health services at affordable cost. <br />
-          Located near Health Care Hospital, Nayapul Mau Road, Sidhari – Azamgarh.
+          Experienced doctors | Patient-first approach | Quality health services
+          at affordable cost. <br />
+          Located near Health Care Hospital, Nayapul Mau Road, Sidhari –
+          Azamgarh.
         </p>
         <div className="space-x-4">
           <div className="flex flex-col md:flex-row items-center md:items-start space-y-4 md:space-y-0 md:space-x-4">
@@ -45,12 +47,12 @@ const Hero = ({ scrollToSection }) => (
             >
               Google Reviews
             </button>
-             <a
-            href="tel:+919452895468"
-            className="w-auto px-6 py-3 bg-yellow-500 text-white rounded-lg hover:bg-green-600 transition"
-          >
-            📞 Emergency Call
-          </a>
+            <a
+              href="tel:+919452895468"
+              className="w-auto px-6 py-3 bg-yellow-500 text-white rounded-lg hover:bg-green-600 transition"
+            >
+              📞 Emergency Call
+            </a>
           </div>
         </div>
       </div>

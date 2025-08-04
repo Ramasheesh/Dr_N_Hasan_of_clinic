@@ -320,7 +320,7 @@ const BookAppointment = () => {
             <div className="bg-white rounded-2xl p-6 text-center shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
               <div className="text-3xl mb-3">📞</div>
               <h4 className="font-bold text-gray-800 mb-2">Call Us</h4>
-              <p className="text-blue-600">+91 6386544147</p>
+              <p className="text-blue-600">+91 9452895468</p>
             </div>
             <div className="bg-white rounded-2xl p-6 text-center shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
               <div className="text-3xl mb-3">⏰</div>
