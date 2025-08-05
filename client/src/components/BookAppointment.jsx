@@ -83,6 +83,11 @@ const BookAppointment = () => {
     "4:30 PM",
     "5:00 PM",
     "5:30 PM",
+    "6:00 PM",
+    "6:30 PM",
+    "7:00 PM",
+    "7:30 PM",
+    "8:00 PM"
   ];
 
   return (
@@ -328,7 +333,7 @@ const BookAppointment = () => {
               <p className="text-gray-600">
                 Mon - Sat
                 <br />
-                10 AM to 6 PM
+                10 AM to 8 PM
               </p>
             </div>
             <div className="bg-white rounded-2xl p-6 text-center shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
