@@ -9,13 +9,13 @@ const Navbar = ({ isMenuOpen, setIsMenuOpen, activeSection, scrollToSection }) =
     { id: 'services', label: 'Services' },
     { id: 'appointment', label: 'Book Appointment' },
     // { id: 'patients', label: 'Treated Patients' },
-    // { id: 'reviews', label: 'Reviews' },
+    { id: 'patients', label: 'Achievements' },
     { id: 'contact', label: 'Contact' }
   ];
 
   return (
     <motion.nav
-      className="fixed top-0 left-0 w-full z-10 bg-gradient-to-r from-black via-green-300 to-blue-400 shadow-md"
+      className="fixed top-0 left-0 w-full z-10 bg-gradient-to-r from-black to-orange-100 shadow-md"
       initial={{ y: -50, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
       transition={{ duration: 0.5, ease: 'easeOut' }}
@@ -23,7 +23,7 @@ const Navbar = ({ isMenuOpen, setIsMenuOpen, activeSection, scrollToSection }) =
       <div className="container mx-auto px-4 py-3 flex justify-between items-center">
         {/* Logo */}
         <motion.div
-          className="text-xl font-bold text-white"
+          className="text-xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-green-400 to-red-500"
           initial={{ opacity: 0, x: -20 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ delay: 0.3 }}
@@ -90,7 +90,7 @@ const Navbar = ({ isMenuOpen, setIsMenuOpen, activeSection, scrollToSection }) =
                 whileTap={{ scale: 0.98 }}
                 onClick={() => {
                   scrollToSection(id);
-                  setIsMenuOpen(false);
+                  setIsMenuOpen(true);
                 }}
               >
                 {label}
