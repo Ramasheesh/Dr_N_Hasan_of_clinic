@@ -15,7 +15,7 @@ const Navbar = ({ isMenuOpen, setIsMenuOpen, activeSection, scrollToSection }) =
 
   return (
     <motion.nav
-      className="fixed top-0 left-0 w-full z-10 bg-gradient-to-r from-black to-orange-100 shadow-md"
+      className="fixed top-0 left-0 w-full z-10 bg-gradient-to-r from-black to-gray-700 shadow-md"
       initial={{ y: -50, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
       transition={{ duration: 0.5, ease: 'easeOut' }}
@@ -36,8 +36,8 @@ const Navbar = ({ isMenuOpen, setIsMenuOpen, activeSection, scrollToSection }) =
           {menuItems.map(({ id, label }, index) => (
             <motion.button
               key={id}
-              className={`text-gray-900 hover:text-red-500 font-medium transition-all duration-300 ${
-                activeSection === id ? 'text-red-500 font-bold' : ''
+              className={`text-gray-100 hover:text-red-500 font-medium transition-all duration-300 ${
+                activeSection === id ? 'text-green-500 font-bold' : ''
               }`}
               onClick={() => scrollToSection(id)}
               initial={{ opacity: 0, y: -10 }}
@@ -54,7 +54,7 @@ const Navbar = ({ isMenuOpen, setIsMenuOpen, activeSection, scrollToSection }) =
         <div className="md:hidden">
           <button onClick={() => setIsMenuOpen(!isMenuOpen)} aria-label="Menu Toggle">
             <motion.svg
-              className="w-6 h-6 text-gray-400"
+              className="w-6 h-6 text-gray-600"
               fill="none"
               stroke="currentColor"
               viewBox="0 0 24 24"
