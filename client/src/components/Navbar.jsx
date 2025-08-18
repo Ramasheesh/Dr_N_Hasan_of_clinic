@@ -7,7 +7,7 @@ const Navbar = ({ isMenuOpen, setIsMenuOpen, activeSection, scrollToSection }) =
     { id: 'home', label: 'Home' },
     { id: 'about', label: 'About' },
     { id: 'services', label: 'Services' },
-    { id: 'appointment', label: 'Book Appointment' },
+    // { id: 'appointment', label: 'Book Appointment' },
     // { id: 'patients', label: 'Treated Patients' },
     { id: 'patients', label: 'Achievements' },
     { id: 'contact', label: 'Contact' }
