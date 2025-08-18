@@ -17,7 +17,7 @@ const Hero = ({ scrollToSection }) => (
           loop
           muted
           playsInline
-          className="h-64 md:h-80 rounded-xl flex items-center justify-center ml-4 md:ml-24 "
+          className="h-64 md:h-80 rounded-xl flex items-center justify-center ml-4"
         >
           <source src={clinicV2} type="video/mp4" />
           Your browser does not support the video tag.

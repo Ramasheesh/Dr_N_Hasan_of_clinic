@@ -8,14 +8,14 @@ const Navbar = ({ isMenuOpen, setIsMenuOpen, activeSection, scrollToSection }) =
     { id: 'about', label: 'About' },
     { id: 'services', label: 'Services' },
     { id: 'appointment', label: 'Book Appointment' },
-    { id: 'patients', label: 'Treated Patients' },
-    { id: 'reviews', label: 'Reviews' },
+    // { id: 'patients', label: 'Treated Patients' },
+    // { id: 'reviews', label: 'Reviews' },
     { id: 'contact', label: 'Contact' }
   ];
 
   return (
     <motion.nav
-      className="fixed top-0 left-0 w-full z-10 bg-gradient-to-r from-black via-gray-300 to-gary-600 shadow-md"
+      className="fixed top-0 left-0 w-full z-10 bg-gradient-to-r from-black via-green-300 to-blue-400 shadow-md"
       initial={{ y: -50, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
       transition={{ duration: 0.5, ease: 'easeOut' }}
